@@ -389,7 +389,7 @@ function validation(input) {
       {
         password_isvalid=true;
         console.log("here1");
-        repasswordValidation(repasswordInput);
+        if(repasswordInput.value)repasswordValidation(repasswordInput);
       }
     btnCheck();
     return true;
@@ -420,3 +420,4 @@ function repasswordValidation(repassword) {
     }
 }
 getMeals();
+
