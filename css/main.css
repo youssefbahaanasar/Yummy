@@ -61,7 +61,7 @@ img{
 }
 
 .offcanvas.offcanvas-start ul{
-    transform: translateY(100%);
+    transform: translateY(0);
     transition: all .5s;
 }
 .offcanvas.show:not(.hiding) ul, 
@@ -158,4 +158,5 @@ img{
 }
 .alert p{
     margin: 0;
+
 }
