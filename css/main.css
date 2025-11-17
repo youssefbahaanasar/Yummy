@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0D0D0D;
+}
+i,li{
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+.inner{
+    cursor: pointer;
+}
+.loading.trans{
+    z-index: -1;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.loading:not(.trans){
+    background-color: black;
+    z-index: 999;
+    opacity: 1;
+}
+.loader {
+  width: 95px;
+  height: 95px;
+  border: 15px dotted #FFF;
+  border-bottom: 15px dotted transparent;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.mealDetails .fa-xmark {
+  color: #c9caca;
+}
+.mealDetails {
+  background-color: #0D0D0D;
+  color: white;
+  z-index: 99999;
+}
+.mealDetails .badge {
+  background-color: #CFF4FC;
+  color: #055160;
+}
+
+.offcanvas.offcanvas-start ul{
+    transform: translateY(100%);
+    transition: all .5s;
+}
+.offcanvas.show:not(.hiding) ul, 
+.offcanvas.showing ul{
+    transform: translateY(0);
+}
+.offcanvas.offcanvas-start ul li {
+    transform: translateY(500%);
+    animation: pos1 0.3s ease forwards;
+}
+.offcanvas.show:not(.hiding) ul li, 
+.offcanvas.showing ul li{
+    animation: pos 0.4s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes pos {
+    0%{
+        transform: translateY(500%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes pos1 {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(500%);
+    }
+}
+.entry{
+    transform: translateX(calc(-10%)) !important;
+    opacity: 0 !important;
+    transition: all 0.5s !important;
+}
+.offcanvas.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: 400px;
+    z-index: 999999;
+    transform: translateX(calc(-100% + 80px) );
+    transition: all .7s;
+    opacity: 1;
+}
+.offcanvas.show:not(.hiding), 
+.offcanvas.showing{
+    transform: translateX(calc(-14%));
+}
+
+.pop-up::after{
+    content: var(--name);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    transition: bottom .5s;
+}
+.meal:hover .pop-up::after{
+    bottom: 0;
+}
+.desc{
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    bottom: -100%;
+    left: 0;
+    z-index: 23;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    transition: all .5s;
+}
+.categorey:hover .desc{
+    bottom: 0;
+}
+.form-control::placeholder{
+    color: #6C757D;
+}
+#ingredientsList i,
+#areaList i{
+    font-size: 64px;
+    color: white;
+}
+#serch{
+    position: relative;
+    z-index: 9999;
+}
+.alert p{
+    margin: 0;
+}

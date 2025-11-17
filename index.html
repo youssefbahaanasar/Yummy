@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/imgi_1_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Yummy</title>
+</head>
+<body>
+    <div class="loading position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center trans">
+        <span class="loader"></span>
+    </div>
+    <div class="mealDetails d-none vh-100 start-0 end-0 top-0 bottom-0 py-5">
+      <div class="container position-relative">
+        <div id="details" class="row py-4">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row offcanvas offcanvas-start visible flex-row entry">
+        <div class="col-2 bg-black"></div>
+        <div class="col-8 text-white offcanvas-body bg-black d-flex flex-column justify-content-between p-4">
+            <div class="position-relative">
+                <ul class="list-group list-unstyled gap-3 z-1">
+                    <li id="Search" style="--i: 1">Search</li>
+                    <li id="Categories" style="--i: 2">Categories</li>
+                    <li id="Area" style="--i: 3">Area</li>
+                    <li id="Ingredients" style="--i: 4">Ingredients</li>
+                    <li id="Contact" style="--i: 5">Contact Us</li>
+                </ul>
+            </div>
+            <div class="flex-grow-1 z-2 bg-black">
+            </div>
+            <div class="text-white z-2 bg-black">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </div>
+        <div class="col-2 offcanvas-header flex-column justify-content-between py-4 px-2">
+            <img src="./images/imgi_1_logo.png" class="w-100" id="offcanvasScrollingLabel"></img>
+            <div class="">
+                <button id="closeBtn" class="btn-close m-0 fs-3  d-none opacity-100 shadow-none" ></button>
+                <button id="bars" class="btn border-0 fs-3">
+                    <i class="fa-solid fa-bars text-black"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-column gap-2">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="serch" class="container w-75">
+        <div id="searchList" class="row pt-4">
+            
+        </div>
+    </div>
+    <section id="main">
+        <div class="container py-4">
+            <div id="mealsList" class="row">
+                
+            </div>
+            <div id="categoriesList" class="row">
+                
+            </div>
+            <div id="areaList" class="row">
+                
+            </div>
+            <div id="ingredientsList" class="row">
+                
+            </div>
+            <div id="contactList" class="d-flex justify-content-center align-items-center  min-vh-100">
+                <div class=" container w-75">
+                    <div class="row g-4">
+                        <div class="col-md-6 g-3">
+                            <input id="name" class="form-control text-black" type="text" placeholder="Enter Your Name">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Special characters and numbers not allowed</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 g-3">
+                            <input id="email" class="form-control text-black" type="email" placeholder="Enter Your Email">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Email not valid *exemple@yyy.zzz</p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="col-md-6 g-3">
+                            <input id="phone" class="form-control text-black" type="text" placeholder="Enter Your phone">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Enter valid Phone Number</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 g-3">
+                            <input id="age" class="form-control text-black" type="number" placeholder="Enter Your Age">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Enter valid age</p>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-6 g-3">
+                            <input id="password" class="form-control text-black" type="password" placeholder="Enter Your Password">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 g-3">
+                            <input id="repassword" class="form-control text-black" type="password" placeholder="Repassword">
+                            <div class="alert alert-danger text-center mt-2 d-none">
+                                <p>Enter valid repassword</p>
+                            </div>
+                        </div>
+                    
+                    <div class="text-center mt-3">
+                    <button id="btnSubmit" type="button" class="btn btn-outline-danger" disabled>Submit<button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
